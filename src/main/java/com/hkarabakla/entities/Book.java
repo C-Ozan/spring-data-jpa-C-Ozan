@@ -2,7 +2,9 @@ package com.hkarabakla.entities;
 
 import javax.persistence.*;
 
-@Entity
+
+@Table(name="Books")
+@Entity()
 public class Book {
 
     @Id
@@ -10,7 +12,9 @@ public class Book {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+
+
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 

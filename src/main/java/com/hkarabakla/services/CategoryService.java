@@ -30,5 +30,6 @@ public class CategoryService {
         categoryRepo.save(c1);
 
         System.out.println(c1);
+
     }
 }

@@ -1,15 +1,13 @@
 package com.hkarabakla.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Addresses")
 public class Address {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private int id;
 
     private String street;
